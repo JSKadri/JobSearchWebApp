@@ -1,31 +1,131 @@
 <!DOCTYPE html>
 
 <!-- A blank html file to use. -->
+<!-- By Tolulope(Tolu) Adebayo -->
 
 <html lang="en">
 
     <head>
         <title> Template for HTML </title>
         <link rel="Reference" href="CSSReference.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- Fonts from google fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap" rel="stylesheet">
         <meta name = "description" content="Pseudo Code for the project"> 
   
-         <style> 
-        body{ 
-            background-color: #278F76;
-            margin: 0;
-         }
-
-        header{
-             background-color: #f9f9f9;
-             height: auto;
-             padding-top: 50px;
-             padding-bottom: 50px;
+        <style> 
+            *{
+                margin: 0;
+                padding: 0;
             }
-        
-        .container{
-            width: 80%;
-            margin: 0, auto;
-        }
+            body{ 
+                background-color: #278F76;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            header{
+                background-color: #f9f9f9;
+                height: 100px;
+                padding: 30px ;
+            }
+
+            nav{
+                display: flex;
+                padding: 2%, 6%;
+                align-items: center;
+            }
+            nav .navigation-logo 
+            {
+                color: #242D42;
+                font-size: 50px;
+                width:  150px;
+                letter-spacing: 1.5px;  
+            }
+            
+            .navigation-bar
+            {
+                flex: 1;
+                text-align: right;
+                letter-spacing: 0.5px;
+                float: right;
+                margin-top: 0px;
+                padding: auto;
+            }
+            .navigation-bar ul li
+            {
+                list-style: none;  
+                display:inline-block;
+                position: relative;
+                padding: 8px, 12px;
+            }
+            .navigation-bar ul li a
+            {
+                color: #242D42;
+                text-decoration: none;
+                padding: 50px;
+                font-size: 16px;
+            }
+            
+            .navigation-bar ul li::after{
+                content: '';
+                width: 0%;
+                height: 3px;
+                background: #278F76;
+                display: block;
+                margin:auto;
+                transition: 0.5s;
+            }
+
+            .navigation-bar ul li:hover:after{
+                width: 100%;
+            }
+ 
+
+            .intro-text{
+                width: 80%;
+                color: #242D42;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform:translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .intro-text h1{
+                font-size: 50px;                
+            }
+
+            .intro-text p{
+                margin: 10px 0 40px;
+                font-size: 16px;
+
+            }
+
+
+            .get-started{
+                display:inline-block;
+                text-decoration: none;
+                color:#f9f9f9;
+                border: 3px solid #242D42;
+                padding: 10px 40px;
+                font-size: 24px;
+                background: transparent;
+                position: relative;
+                cursor: pointer;
+            }
+            .get-started:hover{
+                border: 1px solid #f9f9f9;
+            }
+
+
+
+
+            /* Media queries: for smaller screens */
+            
+
+
+
         </style>
         
     </head>
@@ -35,7 +135,11 @@
         <script src="./FrontEndJS.js"> </script>
 
         <header>
-            <nav class= "navigation-bar">
+            <!-- Logo-->
+            <h1> <a class = navigation-logo>BRANDNAME</a> </h1>
+
+            <!-- // Do it according to context -->
+            <nav class= "navigation-bar">  
                 <ul>
                     <li> <a href="">HOME</a> </li>
                     <li> <a href="">ABOUT</a> </li>
@@ -46,6 +150,28 @@
                 </ul>
             </nav>
         </header>
+
+        <div class="intro-text">
+            <H1>
+                Get your dream job with us
+            </H1>
+            <!--Add BR tags accordingly -->
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                enim ad minim veniam, quis nostrud 
+            </p>
+
+            <!-- Links to the log in page -->
+            <a href="" class="get-started">Get Started</a>
+
+        </div>
+
+        <section>
+            
+        </section>
+
+
 
 
     </body>
