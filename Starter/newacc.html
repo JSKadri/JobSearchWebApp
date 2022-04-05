@@ -15,8 +15,7 @@
         <meta name = "description" content="Pseudo Code for the project"> 
 
         <!-- Using Icon library from font awsome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />       
         <style> 
             *{
                 margin: 0;
@@ -280,8 +279,9 @@
                 color:#f9f9f9;
                 cursor: pointer;
             }
+
+            
         </style>
-        
     </head>
 
     <body>
@@ -290,7 +290,7 @@
 
         <header>
             <!-- Logo-->
-            <h1> <a class = navigation-logo>GI. JOBs</a> </h1>
+            <h1> <a class = navigation-logo>BRANDNAME</a> </h1>
 
             <!-- Javascript needed here  to show menu bar  (add function in the "") -->
             <i class="fa-solid fa-bars" onclick=""></i>    
@@ -312,55 +312,44 @@
         </header>
 
         <section>
-            <div class="intro-text">
-                <H1>
-                    Get your dream job with us
-                </H1>
-                <!-- Add BR tags accordingly -->
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                    enim ad minim veniam, quis nostrud 
-                </p>
+            <div class="wrapper">
+                <div class="title">
+                    Register
+                </div>
+                <div class="form">
+                    <div class="input-field">
+                        <label>First Name</label>
+                        <input type="text" class="input" required>
+                    </div>
 
-                <!-- Links to the log in page  -->
-                <a href="newacc.html" class="get-started">Get Started</a>
+                    <div class="input-field">
+                        <label>Last Name</label>
+                        <input type="text" class="input" required>
+                    </div>
+                    
+                    <div class="input-field">
+                        <label>Email</label>
+                        <input type="email" class="input" required>
+                    </div> 
+
+                    <div class="input-field">
+                        <label>Password</label>
+                        <input type="password" class="input" required>
+                    </div> 
+
+                    <div class="input-field">
+                        <label>Confirm Password</label>
+                        <input type="password" class="input" required>
+                    </div> 
+
+                    <!-- Javascript here -->
+                    <div class="input-field">
+                        <input type="submit"class="submit-button" >
+                    </div>
+                </div>
             </div>
         </section>
-        
-        <!-- Section Jobs Section? -->
-        <section class="why-us" id="why-us">
-            <H1 >
-                Why US?
-            </H1>
-            <!--Add BR tags accordingly -->
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                enim ad minim veniam, quis nostrud 
-
-                Tursted by many
-                we partner up with the best talents
-            </p>
-        </section>
-
-        <section class="questions">
-            <H1 id="FAQ">
-                Frequently Asked Questions
-            </H1>
-
-            <!-- FAQ Collapsable here -->
-
-            <!-- Links to send an email page  -->
-            <h3>
-                More Questions?
-            </h3>
-            <h4 id="Contact"> Send Us an Email!</h4>
-            
-            <p><a href="mailto:person@GI.JOBs.com" class="email">Contact Us</a></p>
-
-        </section>
-
+    
 
         <footer>
             Copyright &copy; 2022 GI. JOBS Inc.
