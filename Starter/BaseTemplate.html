@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-
+<html lang="en"></html>
 <!-- A blank html file to use. -->
 <!-- By Tolulope(Tolu) Adebayo -->
 
-<html lang="en">
-
     <head>
         <title> Template for HTML </title>
-        <link rel="reference" href="CSSReference.css">
+        <link rel="stylesheet" href="CSSReference.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <!-- Fonts from google fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,298 +14,29 @@
 
         <!-- Using Icon library from font awsome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <style> 
-            *{
-                margin: 0;
-                padding: 0;
-            }
-            body{ 
-                /* background-color: #278F76; */
-                font-family: 'Poppins', sans-serif;
-            }
-
-            header{
-                background-color: #f9f9f9;
-                height: 100px;
-                padding: 30px ;
-            }
-
-                        
-            nav{
-                display: flex;
-                /* padding: 2%, 6%; */
-                align-items: center;
-            }
-
-            .navigation-logo
-            {
-                color: #242D42;
-                font-size: 40px;
-                width:  150px;
-                letter-spacing: 1.5px;  
-            }
-            
-            .fa-solid{
-                display: none;
-            }
-
-            .navigation-bar
-            {
-                flex: 1;
-                text-align: right;
-                letter-spacing: 0.5px;
-                float: right;
-                margin-top: 0px;
-                padding: auto;
-            }
-            .navigation-bar ul li
-            {
-                list-style: none;  
-                display:inline-block;
-                position: relative;
-                padding: 8px, 12px;
-            }
-            .navigation-bar ul li a
-            {
-                color: #242D42;
-                text-decoration: none;
-                padding: 50px;
-                font-size: 16px;
-            }
-            
-            .navigation-bar ul li::after{
-                content: '';
-                width: 0%;
-                height: 3px;
-                background: #278F76;
-                display: block;
-                margin:auto;
-                transition: 0.5s;
-            }
-
-            .navigation-bar ul li:hover:after{
-                width: 100%;
-            }
- 
-            nav .fa-solid{
-                display: none;
-            }
-
-            .intro-text{
-
-                background-color: #278F76;
-                color: #242D42;
-                width: 100%;
-                margin:auto;
-                text-align: center;
-                padding-top: 100px;
-                padding-bottom: 300px;
-            }
-
-            .intro-text h1{
-                padding-top: 100px;
-                font-size: 50px;                
-            }
-
-            .intro-text p{
-                margin: 10px 0 40px;
-                font-size: 16px;
-
-            }
-
-            .get-started{
-                display:inline-block;
-                text-decoration: none;
-                color:#f9f9f9;
-                border: 3px solid #242D42;
-                padding: 10px 40px;
-                font-size: 24px;
-                background: transparent;
-                position: relative;
-                cursor: pointer;
-            }
-            .get-started:hover{
-                border: 1px solid #f9f9f9;
-            }
-
-
-
-            .why-us{
-                background-color:#f9f9f9;
-                color: #278F76;
-                width: 100%;
-                margin:auto;
-                text-align: center;
-                padding-top: 100px;
-                padding-bottom: 300px;
-            }
-
-            .why-us p{
-                margin: 10px 0 40px;
-                font-size: 16px;
-
-            }
-
-            .questions{
-                background-color: #242D42;
-                color: #278F76;
-                width: 100%;
-                margin:auto;
-                text-align: center;
-                padding-top: 100px;
-                padding-bottom: 300px;
-            }
-
-            .questions h3{
-                color:#f9f9f9;
-            }
-
-            .email{
-                display:inline-block;
-                text-decoration: none;
-                color:#f9f9f9;
-                border: 1px solid #f9f9f9;
-                padding: 5px 20px;
-                font-size: 14px;
-                background: transparent;
-                position: relative;
-                cursor: pointer;
-            }
-
-            footer{
-                background-color: #f9f9f9;
-                color: #242D42;
-                width: 100%;
-                margin:auto;
-                text-align: center;
-                padding-top: 100px;
-                padding-bottom: 100px;
-            }
-
-            footer .company-add p{
-                margin: 10px 0 40px;
-                font-size: 14px;
-            }
-
-
-            /* Media queries: for smaller screens sus */
-            @media screen and (max-width:1000px){
-                .intro-text h1{
-                    font-size: 25px;
-                }
-
-                .navigation-bar ul li{
-                    display: list-item;
-                    color: #f9f9f9;
-
-                }
-                .navigation-bar{
-                    position: absolute;
-                    background-color: #242D42;
-                    height: 100vh;
-                    width: 300px;
-                    top: 0;
-                    right: -300px;
-                    text-align:center;
-                    transition: 0.5s;
-                }
-                .navigation-bar ul li a
-                {
-                    color: #f9f9f9;
-                    text-decoration: none;
-                    padding: 50px;
-                    font-size: 16px;
-                }
-                nav .fa-solid{
-                    display: inline-block;
-                    color: #f9f9f9;
-                    font-size: 25px;
-                    cursor: pointer;
-                    margin: 10px;
-                }
-                .fa-solid{
-                    display: block;
-                    color: #242D42;
-                    font-size: 30px;
-                    cursor: pointer;
-                    margin: 10px;
-                }
-
-            } 
-
-            /* For the form */
-            body{
-                background-color: #242D42;
-            }
-            .wrapper{
-                background-color:#f9f9f9;
-                max-width: 500px;
-                max-height: 250px;
-                margin: 30px auto ;
-                width: 100%;
-                padding-bottom: 200px;
-            }
-
-            .wrapper .title{
-                font-size: 30px;
-                margin-bottom: 30px;
-                text-align: center;
-                text-transform: uppercase;
-            }
-
-            .wrapper .form .input-field{
-                margin-bottom: 15px;
-                display: flex;
-                align-items: center;
-            }
-
-            .wrapper .form .input-field label{
-                width: 200px;
-                color: #278F76;
-                margin-right: 50px;
-                font-size: 16px;
-                padding-left: 20px;
-            }
-
-            /* hiccup here...not centered */
-            .wrapper .form .input-field .submit-button{
-                width: 60%;
-                padding: 10px 10px;
-                font-size: 16px;
-                border: 0;
-                background-color: #278F76;
-                color:#f9f9f9;
-                cursor: pointer;
-            }
-        </style>
-        
     </head>
 
     <body>
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <!-- Will put the javascript code link here -->
-        <script src="./FrontEndJS.js"> </script>
+        <script src="./FrontEndJS.js"></script>
 
         <header>
             <!-- Logo-->
             <h1> <a class = navigation-logo>GI. JOBs</a> </h1>
 
-            <!-- Javascript needed here  to show menu bar  (add function in the "") -->
-            <i class="fa-solid fa-bars" onclick=""></i>    
-
             <!-- // Do it according to context -->
-            <nav class= "navigation-bar">  
-                <ul>
+            <nav class="navigation-bar">  
+                <!-- Javascript needed here  to show menu bar  (add function in the "") -->
+                <i class="fa-solid fa-bars menu-toggle"></i>    
+                <ul class="nav">
                     <li> <a href="BaseTemplate.html">HOME</a> </li>
                     <li> <a href="#why-us">ABOUT</a> </li>
                     <li> <a href="#FAQ">FAQ</a> </li>
                     <li> <a href="#Contact">CONTACT US</a> </li>
                     <li> <a href="newacc.html">SIGN IN</a> </li>
-                </ul>
-
-                <!-- Javascript needed here for the clicking to close menu bar (add function in the "")-->
-                <i class="fa-solid fa-xmark" onclick=""></i>                
-                
+                </ul>                   
             </nav>
         </header>
 
@@ -361,7 +90,7 @@
 
         </section>
 
-
+        <!-- Footer -->
         <footer>
             Copyright &copy; 2022 GI. JOBS Inc.
             All rights Reserved
@@ -372,8 +101,6 @@
                 </p>
             </div>
         </footer>
-
-
 
     </body>
 </html>

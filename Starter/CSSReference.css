@@ -1,26 +1,26 @@
 /* Importing Fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap');
 
-
-
 *{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-
 header{
     background-color: #f9f9f9;
-    height: 100px;
-    padding: 30px ;
+    padding: 20px;
+    min-height:50px;
 }
 
-            
-nav{
-    display: flex;
-    /* padding: 2%, 6%; */
-    align-items: center;
+header h1 {
+    display: inline;
+    width: 180px;
+}
+       
+header nav{
+    padding: 20px;
+    float: right;
 }
 
 .navigation-logo
@@ -31,16 +31,8 @@ nav{
     letter-spacing: 1.5px;  
 }
 
-.fa-solid{
-    display: none;
-}
-
-
-nav .fa-solid{
-    display: none;
-}
-
-nav .fa-solid ::before{
+/* Don't show icon for when webpage becomes to small to display the nav */
+header nav .menu-toggle {
     display: none;
 }
 
@@ -82,9 +74,7 @@ nav .fa-solid ::before{
     width: 100%;
 }
 
-
 .intro-text{
-
     background-color: #278F76;
     color: #242D42;
     width: 100%;
@@ -164,70 +154,63 @@ nav .fa-solid ::before{
     cursor: pointer;
 }
 
+
 footer{
     background-color: #f9f9f9;
     color: #242D42;
-    width: 100%;
-    margin:auto;
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    min-height:50px;
+    margin-top: auto;
 }
 
 footer .company-add p{
-    margin: 10px 0 40px;
     font-size: 14px;
 }
 
 
 /* Media queries: for smaller screens sus */
-@media screen and (max-width:1000px){
-    .intro-text h1{
-        font-size: 25px;
+@media screen and (max-width:1100px){
+    /* Nav Bar Hidden */
+    header nav ul {
+        margin-top: 50px;
+        margin-left: -168px;
+        width: 208px;
+        height: 350px;
+        background: white;
+        position: fixed;
+        overflow: hidden;
+        max-height: 0;
+    }
+    /* Text Spacing */
+    header nav ul li {
+        text-align: center;
+        padding-bottom: 50px;
+        width: 208px;
+    }
+    /* Nav Bar Unhidden */
+    .showing {
+        max-height: 350px;
+        transition: all ease-in-out 250ms;
     }
 
-    .navigation-bar ul li{
-        display: list-item;
-        color: #f9f9f9;
-
-    }
-    .navigation-bar{
-        position: absolute;
-        background-color: #242D42;
-        height: 100vh;
-        width: 300px;
-        top: 0;
-        right: -300px;
-        text-align:center;
-        transition: 0.5s;
-    }
-    .navigation-bar ul li a
-    {
-        color: #f9f9f9;
-        text-decoration: none;
-        padding: 50px;
-        font-size: 16px;
-    }
-    nav .fa-solid{
-        display: inline-block;
-        color: #f9f9f9;
-        font-size: 25px;
-        cursor: pointer;
-        margin: 10px;
-    }
-    .fa-solid{
+    /* Nar Bar Icon */
+    header nav .menu-toggle {
         display: block;
+        position: absolute;
         color: #242D42;
-        font-size: 30px;
-        cursor: pointer;
-        margin: 10px;
+        right: 10px;
+        top: 30px;
+        font-size: 2.5em;
     }
-
 }
 
 /* For the form */
 body{
     background-color: #242D42;
+    font-family: 'Poppins', sans-serif;
+    height:100vh; margin:0;
+    display: flex;
+    flex-direction: column;
 }
 .wrapper{
     background-color:#f9f9f9;
