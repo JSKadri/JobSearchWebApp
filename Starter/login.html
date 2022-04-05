@@ -28,34 +28,24 @@
 
             <!-- // Do it according to context -->
             <nav class= "navigation-bar">  
-                <!-- Javascript needed here  to show menu bar  (add function in the "") -->
+                <!-- Javascript needed here to show menu bar -->
                 <i class="fa-solid fa-bars menu-toggle"></i>    
                 <ul class="nav">
                     <li> <a href="BaseTemplate.html">HOME</a> </li>
                     <li> <a href="BaseTemplate.html#why-us">ABOUT</a> </li>
                     <li> <a href="BaseTemplate.html#FAQ">FAQ</a> </li>
                     <li> <a href="BaseTemplate.html#Contact">CONTACT US</a> </li>
-                    <li> <a href="login.html">SIGN IN</a> </li>
+                    <li> <a href="newacc.html">SIGN IN</a> </li>
                 </ul>                   
             </nav>
         </header>
 
         <section>
-            <div class="wrapper">
+            <div class="login-wrapper">
                 <div class="title">
-                    Register
+                    Log In
                 </div>
-                <div class="form">
-                    <div class="input-field">
-                        <label>First Name</label>
-                        <input type="text" class="input" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Last Name</label>
-                        <input type="text" class="input" required>
-                    </div>
-                    
+                <div class="form">                   
                     <div class="input-field">
                         <label>Email</label>
                         <input type="email" class="input" required>
@@ -66,23 +56,19 @@
                         <input type="password" class="input" required>
                     </div> 
 
-                    <div class="input-field">
-                        <label>Confirm Password</label>
-                        <input type="password" class="input" required>
-                    </div> 
-
                     <!-- Javascript here -->
                     <div class="input-field">
                         <input type="submit"class="submit-button" >
                     </div>
 
-                    <P>
-                        Have an account?
+                   <P>
+                        Don't Have an account?
+
                         <!-- Links to the log in page  -->
-                        <a href="login.html" class="new-acc">Sign In</a>
-                   </P>
-
-
+                        <a href="newacc.html" class="have-acc">Create One</a>
+                   </P> 
+                   <!-- Links to the log in page 
+                    <a href="newacc.html" class="new-acc">Create One</a> -->
                 </div>
             </div>
         </section>
