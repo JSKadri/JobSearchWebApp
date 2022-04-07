@@ -179,26 +179,16 @@ header nav .menu-toggle {
     color: #242D42;
 }
 
+/* for the accordion pannel */
 .panel {
     padding: 0 16px;
     background-color: #f9f9f9;
     max-height: 0;
+    margin: 10px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-/* Before the section has been pressed display a plus sign */
-.accordion:after {
-    content: '\02795'; /* "plus" sign (+) */
-    font-size: 10px;
-    color: #242D42;
-    float: right;
-    margin-left: 5px;
-}
-  
-/* Once the section has been pressed display a minus sign */
-.active:after {
-    content: "\2796"; /* minus sign (-) */
-}
+
 
 /* for the contact us portion */
 .email{
