@@ -1,7 +1,6 @@
-//Front End - Java Script for Group Project
-//Code created by Katherine Morozov
-
-//For Desktop
+// Front End - Java Script for Group Project
+// By Katherine Morozov
+// Modified by Tolulope(Tolu) Adebayo and Jawad Kadri
 
 //For Mobile
 /* Display the dropdown when the nav bar is clicked in mobile view */
@@ -12,4 +11,3 @@ $(document).ready(function(){
     });
 });
 
-//Giving User-based Privileges -> add to the backend.
