@@ -218,10 +218,11 @@ body{
     padding-top: 50px;
     background-color:#f9f9f9;
     max-width: 500px;
-    max-height: 270px;
+    max-height: 300px;
     margin: 30px auto ;
     width: 100%;
     padding-bottom: 100px;
+    border-radius: 25px;
 }
 
 .wrapper .title{
@@ -282,6 +283,7 @@ body{
     margin: 30px auto ;
     width: 100%;
     padding-bottom: 100px;
+    border-radius: 25px;
 }
 
 .login-wrapper .title{
