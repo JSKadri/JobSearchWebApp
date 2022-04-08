@@ -7,7 +7,6 @@
 $(document).ready(function(){
     $(' .menu-toggle').on('click', function() {
         $('.nav').toggleClass('showing');       // Everything in the NAV should appear on click
-        $('.nav ul').toggleClass('showing');    // NAV + UL should appear on click
     });
 });
 

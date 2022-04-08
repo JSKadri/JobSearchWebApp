@@ -5,7 +5,7 @@
 <html lang="en"></html>
     <head>
         <title> Job Description </title>
-        <link rel="stylesheet" href="CSSReference.css">
+        <link rel="stylesheet" href="../Starter/CSSReference.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <!-- Fonts from google fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,6 @@
     </head>
 
     <body>
-        <!-- JQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <!-- Will put the javascript code link here -->
-        <script src="./FrontEndJS.js"></script>
-
         <!--- Header -->
         <?php include(ROOT_PATH . "/include/header.php"); ?>
 
@@ -64,6 +59,11 @@
 
         <!-- Footer -->
         <?php include(ROOT_PATH . "/include/footer.php"); ?>
+
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Will put the javascript code link here -->
+        <script src="../Starter/FrontEndJS.js"></script>
 
     </body>
 </html>

@@ -7,10 +7,10 @@
         <!-- Javascript needed here to show menu bar-->
         <i class="fa-solid fa-bars menu-toggle"></i>    
         <ul class="nav">
-            <li> <a href="index.php">HOME</a> </li>
-            <li> <a href="index.php#why-us">ABOUT</a> </li>
-            <li> <a href="index.php#FAQ">FAQ</a> </li>
-            <li> <a href="index.php#Contact">CONTACT US</a> </li>
+            <li> <a href="/Starter/index.php">HOME</a> </li>
+            <li> <a href="/Starter/index.php#why-us">ABOUT</a> </li>
+            <li> <a href="/Starter/index.php#FAQ">FAQ</a> </li>
+            <li> <a href="/Starter/index.php#Contact">CONTACT US</a> </li>
 
             <?php if(isset($_SESSION['id'])) : ?>
                 <?php if(isset($_SESSION['companyName'])) : ?>
@@ -21,6 +21,7 @@
                                 <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
                             </a>
                             <ul>
+                            <li class="jobline"><a href="/jobs/creation.php" class="jobs">Create Jobs</a></li>
                                 <li><a href="<?php echo BASE_URL . 'database/logout.php' ?>" class="logout">Logout</a></li>
                             </ul>
                         </li>
@@ -32,7 +33,8 @@
                                 <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
                             </a>
                             <ul>
-                                <li><a href="<?php echo BASE_URL . 'database/logout.php' ?>" class="logout">Logout</a></li>
+                                <li class="jobline"><a href="/jobs/job_description.php" class="jobs">View Jobs</a></li>
+                                <li class="logoutline" ><a href="<?php echo BASE_URL . 'database/logout.php' ?>" class="logout">Logout</a></li>
                             </ul>
                         </li>
                     <?php endif; ?>

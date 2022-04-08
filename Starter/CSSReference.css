@@ -69,13 +69,12 @@ header nav{
 .nav li ul {
     display: none;
     position: absolute;
-    background: #242D42;
+    background: #ffffff;
     width: 100%;
     top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 35px;
     text-align: center;
 }
-
 
 /* Underline for Account Icon/Name */
 .account:hover::after {
@@ -85,7 +84,10 @@ header nav{
 /* Display Account Drop Down */
 .account:hover ul{
     display: block;
-    margin-bottom: 50px;
+}
+
+.account ul li {
+    padding-top: 35px;
 }
 
 /* Logout Button */
@@ -94,13 +96,25 @@ header nav{
     font-weight: bold;
 }
 
-.account ul li:hover::after {
+.logoutline:hover::after {
     background: red;
-
 }
 
+@media screen and (max-width:1100px) {
+    .nav li ul {
+        padding-bottom: 200px;
+        top: 0px;
+    }
+    .account ul {    
+        left: 166px;
+        color: red;
+    }
+    .account ul li {
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+}
 
-/* margin: top right bottom left */
 
 /*----------------------------------------------------------*/
 
@@ -299,7 +313,7 @@ footer .company-add p{
         margin-top: 50px;
         margin-left: -168px;
         width: 208px;
-        height: 350px;
+        height: 650px;
         background: white;
         position: fixed;
         overflow: hidden;
@@ -313,7 +327,7 @@ footer .company-add p{
     }
     /* Nav Bar Unhidden */
     .showing {
-        max-height: 350px;
+        max-height: 515px;
         transition: all ease-in-out 250ms;
     }
 
