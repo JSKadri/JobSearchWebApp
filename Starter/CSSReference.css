@@ -511,3 +511,55 @@ body{
     /*content: "✖";*/
     content: "\0058";
 }
+
+/* For the job description */
+
+.job-section {
+    background-color: #242D42;
+    color: #278F76;
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.job {
+    background-color: #f9f9f9;
+    margin: 30px auto;
+    padding: 60px 0 0 0;
+    max-width: 1200px;
+    width: 90%;
+    padding-bottom: 100px;
+    border-radius: 25px;
+}
+
+.job-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.job-text {
+    margin: 15px 0;
+}
+
+.apply-btn{
+    display:inline-block;
+    text-decoration: none;
+    background: #278F76;
+    color: #fff;
+    margin: 25px 0;
+    padding: 10px 40px;
+    font-size: 24px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.apply-btn:hover{
+    border: 0px;
+    background: #278F76;
+    opacity: 75%;
+}
