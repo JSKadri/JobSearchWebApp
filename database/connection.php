@@ -38,6 +38,22 @@
          } else {
              echo "Error finding table: " . mysqli_error($connection);
          }
+
+        $sql = "CREATE TABLE IF NOT EXISTS gi_db.jobs (   
+            id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            jobtitle VARCHAR(50) NOT NULL,
+            jobdesc VARCHAR(2000) NOT NULL,
+            jobreq VARCHAR(2000) NOT NULL,
+            jobloc VARCHAR(100) NOT NULL,
+            email VARCHAR(50) NOT NULL
+        )";    // Create the table
+
+        if(mysqli_query($connection, $sql)) {
+            //echo "Found Table jobs successfully";
+        } else {
+            echo "Error finding table: " . mysqli_error($connection);
+        }
+
      } else {
          echo "Error finding database: " . mysqli_error($connection);
      }
