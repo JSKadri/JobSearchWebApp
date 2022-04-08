@@ -200,3 +200,57 @@ $('#checkCompanyRegister').click(function(){
         confirmPassword.style.borderColor="red";
     }
 });
+
+/* Auto Size For Mobile */
+$("textarea").each(function () {
+    this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
+  }).on("input", function () {
+    this.style.height = "auto";
+    this.style.height = (this.scrollHeight) + "px";
+  });
+
+$("#creationSubmit").click(function(){
+    console.log("BUTTON CLICKED");
+    var form = document.getElementById("form-job");
+    var jobTitle = document.getElementById("jobtitle");
+    var jobDescription = document.getElementById("jobdesc");
+    var jobRequirements = document.getElementById("jobreq");
+    var jobLocation = document.getElementById("jobloc");
+    var nonValid = false;
+
+    /* Reset color back to default */
+    jobTitle.style.borderColor="#ccc";
+    jobDescription.style.borderColor="#ccc";
+    jobLocation.style.borderColor="#ccc";
+    jobRequirements.style.borderColor="#ccc";
+
+    /* Check for invalid inputs for the other textboxes */
+    if(jobTitle.value == "") {
+        jobTitle.style.borderColor="red";
+        nonValid = true;
+    }
+    if(jobDescription.value == "") {
+        jobDescription.style.borderColor="red";
+        nonValid = true;
+    }
+    if(jobLocation.value == "") {
+        jobLocation.style.borderColor="red";
+        nonValid = true;
+    }
+    if(jobRequirements.value == "") {
+        jobRequirements.style.borderColor="red";
+        nonValid = true;
+    }
+ 
+    /* When an invalid input is detected don't submit! Make the user fix it! */
+    if(nonValid == true) {
+        nonValid = false;
+        alert("Missing or Invalid Field. Please fill or fix the missing content.");
+        function handleForm(event) { event.preventDefault(); } 
+        form.addEventListener('submit', handleForm);
+    } else {
+        console.log("FORM SUBMITTED");
+    }
+});
+
+

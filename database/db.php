@@ -4,7 +4,7 @@
 
     require('connection.php');
 
-    $sql = "SELECT * FROM users JOIN buisnesses";
+    $sql = "SELECT * FROM users JOIN buisnesses JOIN jobs";
     $stmt = $connection->prepare($sql);
     $stmt->execute();
     $users = $stmt->get_result()->fetch_all(MYSQLI_ASSOC); // Get all records in the db
@@ -78,6 +78,32 @@
         }
     }
 
+    /* Selects all values in the jobs table */
+    function selectAllJob($table3, $conditions = []) {
+        global $connection;     // Allows us to use the global variable $connection
+        $sql = "SELECT * FROM $table3";  // SQL query
+
+        if(empty($conditions)) {                  // If there are no conditions
+            $stmt = $connection->prepare($sql);   // Prepare the SQL query
+            $stmt->execute();                     // Execute the SQL query
+            $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);    // Get all records in the db
+            return $records;                       // Return the records
+        } else {             // If there are conditions
+            $i = 0;                               // Counter
+            foreach($conditions as $key => $value) {    // For each condition
+                if($i === 0) {                     // If it is the first condition
+                    $sql .= " WHERE $key = ?";    // Add the condition to the SQL query
+                } else {                         // If it is not the first condition
+                    $sql .= " AND $key = ?";    // Add the condition to the SQL query
+                }
+                $i++;                          // Increment the counter
+            }
+            $stmt = executeQuery($sql, $conditions);   // Execute the query
+            $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);   // Get all records in the db
+            return $records;                       // Return the records
+        }
+    }
+
     /* Selects one value in the user table */
     function selectOneUser($table, $conditions) {
         global $connection;             // Allows us to use the global $connection variable
@@ -120,6 +146,27 @@
         return $records;
     }
 
+    /* Selects one value in the buisness table */
+    function selectOneJob($table3, $conditions) {
+        global $connection;             // Allows us to use the global $connection variable
+        $sql = "SELECT * FROM $table3";  // SQL SELECT statement
+
+        $i = 0; // Counter
+        foreach($conditions as $key => $value) {    // Loops through the conditions
+            if($i === 0) {                  // If the counter is 0
+                $sql .= " WHERE $key=?";  // Add the WHERE clause
+            } else {                        // If the counter is not 0
+                $sql .= " AND $key=?";    // Add the AND clause
+            }
+            $i++;   // Increment the counter
+        }
+
+        $sql = $sql . " LIMIT 1";   // Limit the results to 1
+        $stmt = executeQuery($sql, $conditions);    // Execute the query
+        $records = $stmt->get_result()->fetch_assoc();    // Get the result
+        return $records;
+    }
+
     /* Create and store users in the database */
     function createUser($table, $data) {
         global $connection; // Allows us to use the connection variable outside of this function
@@ -143,6 +190,26 @@
     function createCompany($table2, $data) {
         global $connection; // Allows us to use the connection variable outside of this function
         $sql = "INSERT INTO $table2 SET ";   // SQL INSERT statement
+
+        $i = 0; // counter
+        foreach($data as $key => $value) {  // Loop through the data
+            if($i === 0) {                  // If the counter is 0
+                $sql .= "$key = ?";         // Add the key and value to the SQL statement
+            } else {                        // If the counter is not 0
+                $sql .= ", $key = ?";       // Add the key and value to the SQL statement
+            }
+            $i++; // Increment the counter
+        }
+
+       $stmt = executeQuery($sql, $data); // Execute the query
+       $id = $stmt->insert_id;           // Get the id of the last inserted record
+       return $id; // Return the id
+    }
+
+    /* Create and store jobs in the database */
+    function createJob($table3, $data) {
+        global $connection; // Allows us to use the connection variable outside of this function
+        $sql = "INSERT INTO $table3 SET ";   // SQL INSERT statement
 
         $i = 0; // counter
         foreach($data as $key => $value) {  // Loop through the data
@@ -198,6 +265,26 @@
        return $stmt->affected_rows; // Return the id
     }
 
+    /* Update jobs in the database */
+    function updateJobs($table3, $id, $data) {
+        global $connection; // Allows us to use the connection variable outside of this function
+        $sql = "UPDATE $table3 SET ";   // SQL UPDATE statement
+
+        $i = 0; // counter
+        foreach($data as $key => $value) {  // Loop through the data
+            if($i === 0) {                  // If the counter is 0
+                $sql .= "$key = ?";         // Add the key and value to the SQL statement
+            } else {                        // If the counter is not 0
+                $sql .= ", $key = ?";       // Add the key and value to the SQL statement
+            }
+            $i++; // Increment the counter
+        }
+        
+       $sql .= " WHERE id = $id";          // Add the WHERE clause
+       $stmt = executeQuery($sql, $data); // Execute the query
+       return $stmt->affected_rows; // Return the id
+    }
+
     /* Delete users in the database */
     function deleteUser($table, $id) {
         global $connection; // Allows us to use the connection variable outside of this function
@@ -210,6 +297,14 @@
     function deleteCompany($table2, $id) {
         global $connection; // Allows us to use the connection variable outside of this function
         $sql = "DELETE FROM $table2 WHERE id = ?"; // SQL DELETE statement
+        $stmt = executeQuery($sql, ['id' => $id]); // Execute the query
+        return $stmt->affected_rows; // Return the id
+    }
+
+    /* Delete jobs in the database */
+    function deleteJob($table3, $id) {
+        global $connection; // Allows us to use the connection variable outside of this function
+        $sql = "DELETE FROM $table3 WHERE id = ?"; // SQL DELETE statement
         $stmt = executeQuery($sql, ['id' => $id]); // Execute the query
         return $stmt->affected_rows; // Return the id
     }

@@ -21,7 +21,8 @@
                                 <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
                             </a>
                             <ul>
-                            <li class="jobline"><a href="/jobs/creation.php" class="jobs">Create Jobs</a></li>
+                                <li class="jobline"><a href="/jobs/creation.php" class="jobs">Create Jobs</a></li>
+                                <li class="jobline"><a href="/jobs/dashboard.php">View Jobs</a></li>
                                 <li><a href="<?php echo BASE_URL . 'database/logout.php' ?>" class="logout">Logout</a></li>
                             </ul>
                         </li>
@@ -33,7 +34,7 @@
                                 <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
                             </a>
                             <ul>
-                                <li class="jobline"><a href="/jobs/job_description.php" class="jobs">View Jobs</a></li>
+                                <li class="jobline"><a href="/jobs/dashboard.php">View Jobs</a></li>
                                 <li class="logoutline" ><a href="<?php echo BASE_URL . 'database/logout.php' ?>" class="logout">Logout</a></li>
                             </ul>
                         </li>

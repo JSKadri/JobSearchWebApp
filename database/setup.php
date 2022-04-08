@@ -8,11 +8,18 @@
     $email = '';
     $password = '';
     $password2 = '';
+    
+    $jobtitle = '';
+    $jobdesc = '';
+    $jobreq = '';
+    $jobloc = '';
+    
     $table = 'users';
     $table2 = 'buisnesses';
+    $table3 = 'jobs';
 
     /* Permissions
-        1 -> User/Company
+        1 -> User
         2 -> (Extra)
         3 -> Admin
     */
@@ -60,7 +67,7 @@
             unset($_POST['acc-register-btn'], $_POST['password2']);
 
             $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password (Secure-it)
-            $_POST['permission'] = 0; // By default user is not an permission
+            $_POST['permission'] = 1; // By default user is not an permission
 
             /* Lower case the first and last name */
             $_POST['firstname'] = strtolower($_POST['firstname']);
@@ -128,4 +135,22 @@
             array_push($errors, "Bad Combination");    // Push the error message into the array
         }
     }
+
+    if(isset($_POST['creation-btn'])) {
+
+        // Remove(unset) the register button and confirm password from the $_POST array
+        unset($_POST['creation-btn']);
+
+        $temp = selectOneCompany($table2, ['id' => $_SESSION['id']]);
+        $_POST['email'] = $temp['email'];
+        
+        $user_id = createJob($table3, $_POST); // Insert the job data into the database
+
+        // Send user to the job page
+        $_SESSION['message'] = "Job Created!";
+        $_SESSION['type'] = "success";
+        header('location: ../jobs/dashboard.php'); // Redirect to the home page
+    }
+
+
 ?>

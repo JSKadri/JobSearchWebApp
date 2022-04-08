@@ -21,6 +21,7 @@
     </head>
 
     <body>
+        <?php include(ROOT_PATH . "/include/denyAll.php"); ?>
         <!--- Header -->
         <?php include(ROOT_PATH . "/include/header.php"); ?>
 

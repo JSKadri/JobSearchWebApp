@@ -72,7 +72,7 @@ header nav{
     background: #ffffff;
     width: 100%;
     top: 50px;
-    padding-bottom: 35px;
+    padding-bottom: 5px;
     text-align: center;
 }
 
@@ -86,8 +86,10 @@ header nav{
     display: block;
 }
 
+
 .account ul li {
-    padding-top: 35px;
+    padding-bottom: 30px;
+    text-align: center;
 }
 
 /* Logout Button */
@@ -307,7 +309,7 @@ footer .company-add p{
 
 
 /* Media queries: for smaller screens*/
-@media screen and (max-width:1100px){
+@media screen and (max-width:1550px){
     /* Nav Bar Hidden */
     header nav ul {
         margin-top: 50px;
@@ -533,9 +535,8 @@ body{
     color: #278F76;
     width: 100%;
     margin:auto;
-    text-align: center;
     padding-top: 100px;
-    padding-bottom: 150px;
+    padding-bottom: 75px;
 }
 
 .job {
@@ -544,7 +545,7 @@ body{
     padding: 60px 0 0 0;
     max-width: 1200px;
     width: 90%;
-    padding-bottom: 100px;
+    padding-bottom: 75px;
     border-radius: 25px;
 }
 
@@ -554,16 +555,24 @@ body{
     text-align: center;
 }
 
-.job-text {
-    margin: 15px 0;
+.job-subtitle {
+    padding-left: 20px;
 }
+
+.job-text {
+    text-align: left;
+    padding-left: 30px;
+    white-space: pre-wrap;
+    max-width: 90%;
+}
+
 
 .apply-btn{
     display:inline-block;
     text-decoration: none;
     background: #278F76;
     color: #fff;
-    margin: 25px 0;
+    margin: 0;
     padding: 10px 40px;
     font-size: 24px;
     position: relative;
@@ -577,3 +586,56 @@ body{
     background: #278F76;
     opacity: 75%;
 }
+
+
+
+/*---------------------------------------------------------------- Creating a job form ---------------------------------------------------------------- */
+
+.form-body-job {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-size: 40px;
+    padding: 20px;
+    padding-top: 0%;
+}
+
+.form-title-job {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #278F76;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.typetext {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #242D42;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.5em;
+}
+
+/* When the submit button is hovered */
+input[type=submit]:hover { background-color: #424d66; }
+
+
+
+/*---------------------------------------------------------------- Creating a job form ---------------------------------------------------------------- */
