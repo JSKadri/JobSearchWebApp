@@ -1,3 +1,6 @@
+<?php   include("../path.php");
+        include("../database/setup.php"); 
+?>
 <!DOCTYPE html>
 <html lang="en"></html>
 <!-- The HTML file for the Login Page -->
@@ -18,74 +21,51 @@
     </head>
 
     <body>
-        <header>
-            <!-- Logo-->
-            <h1> <a class = navigation-logo>GI. JOBs</a> </h1>
-
-            <!-- // Do it according to context -->
-            <nav class= "navigation-bar">  
-                <!-- Javascript needed here to show menu bar -->
-                <i class="fa-solid fa-bars menu-toggle"></i>    
-                <ul class="nav">
-                    <li> <a href="index.html">HOME</a> </li>
-                    <li> <a href="index.html#why-us">ABOUT</a> </li>
-                    <li> <a href="index.html#FAQ">FAQ</a> </li>
-                    <li> <a href="index.html#Contact">CONTACT US</a> </li>
-                    <li> <a href="newacc.html">SIGN IN</a> </li>
-                </ul>                   
-            </nav>
-        </header>
+        <!--- Header -->
+        <?php include(ROOT_PATH . "/include/header.php"); ?>
 
         <section>
             <div class="login-wrapper">
                 <div class="title">
                     Log In
                 </div>
+                <?php include(ROOT_PATH . "/database/formError.php"); ?>
                 <div class="form">
-                    <form id="form">                   
+                    <form id="form" action="login.php" method="post">                   
                         <div class="input-field">
                             <label>Email</label>
-                            <input id="email" type="email" class="input" required>
+                            <input id="email" name="email" type="email" class="input" required>
                         </div> 
 
                         <div class="input-field">
                             <label>Password</label>
-                            <input id="password" type="password" class="input" required>
+                            <input id="password" name="password" type="password" class="input" required>
                         </div> 
 
                         <div class="input-field">
-                            <input id="checkUserLogin" type="submit"class="submit-button">
+                            <input id="checkUserLogin" name="login-btn" type="submit"class="submit-button">
                         </div>
                     </form>
                    <P>
                         Don't have an account?
 
                         <!-- Link to the account page  -->
-                        <a href="newacc.html" class="have-acc">Create One</a>
+                        <a href="newacc.php" class="have-acc">Create One</a>
                    </P> 
 
                    <P>
                        New Company to this site?
 
                         <!-- Link to the account page for the company -->
-                       <a href="newcompanyacc.html" class="have-acc">Create One for your Company</a>
+                       <a href="newcompanyacc.php" class="have-acc">Create One for your Company</a>
                    </P>
                     
                 </div>
             </div>
         </section>
     
-     <!-- Footer -->
-     <footer>
-        Copyright &copy; 2022 GI. JOBS Inc.
-        All rights Reserved
-
-        <div class= company-add>
-            <p>
-                GI. JOBS Inc. 1800 NoWhere Road Suite 000, What City, Which Country, XX 888 888
-            </p>
-        </div>
-    </footer>
+    <!-- Footer -->
+	<?php include(ROOT_PATH . "/include/footer.php"); ?>
 
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

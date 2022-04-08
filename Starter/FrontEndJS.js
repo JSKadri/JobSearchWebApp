@@ -13,7 +13,6 @@ $(document).ready(function(){
 
 /* We check for invalid inputs after submit is pressed */
 $('#checkUserLogin').click(function(){
-
     /* Setup Initail Varibles 
     .value will get the value of the id */
     var form = document.getElementById("form");
@@ -49,17 +48,17 @@ $('#checkCompanyLogin').click(function(){
     /* Setup Initail Varibles 
     .value will get the value of the id */
     var form = document.getElementById("form");
-    var CompanyName = document.getElementById("CompanyName");
+    var companyName = document.getElementById("companyName");
     var email = document.getElementById("email");
     var nonValid = false;
 
     /* Reset color back to default */
-    CompanyName.style.borderColor="#ccc";
+    companyName.style.borderColor="#ccc";
     email.style.borderColor="#ccc";
 
     /* Check for invalid inputs for the other textboxes */
-    if(CompanyName.value == "") {
-        CompanyName.style.borderColor="red";
+    if(companyName.value == "") {
+        companyName.style.borderColor="red";
         nonValid = true;
     }
     if(email.value == "") {
@@ -151,21 +150,21 @@ $('#checkCompanyRegister').click(function(){
     /* Setup Initail Varibles 
     .value will get the value of the id */
     var form = document.getElementById("form");
-    var CompanyName = document.getElementById("CompanyName");
+    var companyName = document.getElementById("companyName");
     var email = document.getElementById('email');
     var password = document.getElementById('password');
     var confirmPassword = document.getElementById('cpassword');
     var nonValid = false;
 
     /* Reset color back to default */
-    CompanyName.style.borderColor="#ccc";
+    companyName.style.borderColor="#ccc";
     email.style.borderColor="#ccc";
     password.style.borderColor="#ccc";
     confirmPassword.style.borderColor="#ccc";
 
     /* Check for invalid inputs for the other textboxes */
-    if(CompanyName.value == "") {
-        CompanyName.style.borderColor="red";
+    if(companyName.value == "") {
+        companyName.style.borderColor="red";
         nonValid = true;
     }
     if(password.value == "") {

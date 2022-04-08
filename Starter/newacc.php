@@ -1,3 +1,6 @@
+<?php   include("../path.php");
+        include("../database/setup.php"); 
+?>
 <!DOCTYPE html>
 <html lang="en"></html>
 <!-- The HTML file for Account -->
@@ -18,49 +21,37 @@
     </head>
 
     <body>
-        <header>
-            <!-- Logo-->
-            <h1> <a class = navigation-logo>GI. JOBs</a> </h1>
-
-            <!-- // Do it according to context -->
-            <nav class= "navigation-bar">  
-                <!-- Javascript needed here  to show menu bar  (add function in the "") -->
-                <i class="fa-solid fa-bars menu-toggle"></i>    
-                <ul class="nav">
-                    <li> <a href="index.html">HOME</a> </li>
-                    <li> <a href="index.html#why-us">ABOUT</a> </li>
-                    <li> <a href="index.html#FAQ">FAQ</a> </li>
-                    <li> <a href="index.html#Contact">CONTACT US</a> </li>
-                    <li> <a href="login.html">SIGN IN</a> </li>
-                </ul>                   
-            </nav>
-        </header>
+        <!--- Header -->
+        <?php include(ROOT_PATH . "/include/header.php"); ?>
 
         <section>
             <div class="wrapper">
                 <div class="title">
                     Register
                 </div>
+
+                <?php include(ROOT_PATH . "/database/formError.php"); ?>
+
                 <div class="form">
-                    <form id="form">
+                    <form id="form" action="newacc.php" method="post">
                         <div class="input-field">
                             <label>First Name</label>
-                            <input id="firstName" type="text" class="input" required>
+                            <input id="firstName" name="firstname" type="text" class="input" required>
                         </div>
 
                         <div class="input-field">
                             <label>Last Name</label>
-                            <input id="lastName" type="text" class="input" required>
+                            <input id="lastName" name="lastname" type="text" class="input" required>
                         </div>
                         
                         <div class="input-field">
                             <label>Email</label>
-                            <input id="email" type="email" class="input" required>
+                            <input id="email" name="email" type="email" class="input" required>
                         </div> 
 
                         <div class="input-field">
                             <label>Password</label>
-                            <input id="password" type="password" class="input" 
+                            <input id="password" name="password" type="password" class="input" 
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                             title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                             required>
@@ -68,24 +59,24 @@
 
                         <div class="input-field">
                             <label>Confirm Password</label>
-                            <input id="cpassword" type="password" class="input" required>
+                            <input id="cpassword" name="password2" type="password" class="input" required>
                         </div> 
 
                         <div class="input-field">
-                            <input id="checkUserRegister" type="submit"class="submit-button" >
+                            <input id="checkUserRegister" name="acc-register-btn" type="submit" class="submit-button">
                         </div>
                     </form>
 
                     <P>
                         Have an account?
                         <!-- Links to the log in page  -->
-                        <a href="login.html" class="new-acc">Sign In</a>
+                        <a href="login.php" class="new-acc">Sign In</a>
                    </P>
 
                    <P>
                        Have an account for your Company?
                       <!-- Links to the log in page for the company  -->
-                      <a href="Company login.html" class="new-acc">Sign In with your Company</a>
+                      <a href="Company login.php" class="new-acc">Sign In with your Company</a>
                    </P>
                 </div>
             </div>
@@ -132,17 +123,8 @@
             }
         </style>
     
-     <!-- Footer -->
-     <footer>
-        Copyright &copy; 2022 GI. JOBS Inc.
-        All rights Reserved
-
-        <div class= company-add>
-            <p>
-                GI. JOBS Inc. 1800 NoWhere Road Suite 000, What City, Which Country, XX 888 888
-            </p>
-        </div>
-    </footer>
+    <!-- Footer -->
+    <?php include(ROOT_PATH . "/include/footer.php"); ?>
 
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

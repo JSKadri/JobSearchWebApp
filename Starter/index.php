@@ -1,3 +1,6 @@
+<?php   include("../path.php");
+        include("../database/db.php"); 
+?>
 <!DOCTYPE html>
 <html lang="en"></html>
 <!-- The Main page for the project -->
@@ -18,28 +21,9 @@
     </head>
 
     <body>
-        <!-- JQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <!-- Will put the javascript code link here -->
-        <script src="./FrontEndJS.js"></script>
-
-        <header>
-            <!-- Logo-->
-            <h1> <a class = navigation-logo>GI. JOBs</a> </h1>
-
-            <!-- // Do it according to context -->
-            <nav class="navigation-bar">  
-                <!-- Javascript needed here to show menu bar-->
-                <i class="fa-solid fa-bars menu-toggle"></i>    
-                <ul class="nav">
-                    <li> <a href="index.html">HOME</a> </li>
-                    <li> <a href="#why-us">ABOUT</a> </li>
-                    <li> <a href="#FAQ">FAQ</a> </li>
-                    <li> <a href="#Contact">CONTACT US</a> </li>
-                    <li> <a href="login.html">SIGN IN</a> </li>
-                </ul>                   
-            </nav>
-        </header>
+        <!--- Header & POPUP -->
+        <?php include(ROOT_PATH . "/include/header.php"); ?>
+        <?php include(ROOT_PATH . "/include/popup.php"); ?>
 
         <section>
             <div class="intro-text">
@@ -54,7 +38,7 @@
                 </p>
 
                 <!-- Links to the log in page  -->
-                <a href="newacc.html" class="get-started">Get Started</a>
+                <a href="newacc.php" class="get-started">Get Started</a>
             </div>
         </section>
         
@@ -127,17 +111,13 @@
 
         </section>
 
-        <!-- Footer -->
-        <footer>
-            Copyright &copy; 2022 GI. JOBS Inc.
-            All rights Reserved
+    <!-- Footer -->
+    <?php include(ROOT_PATH . "/include/footer.php"); ?>
 
-            <div class= company-add>
-                <p>
-                    GI. JOBS Inc. 1800 NoWhere Road Suite 000, What City, Which Country, XX 888 888
-                </p>
-            </div>
-        </footer>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Will put the javascript code link here -->
+    <script src="./FrontEndJS.js"></script>
 
     </body>
 </html>

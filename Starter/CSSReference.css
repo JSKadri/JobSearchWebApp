@@ -35,6 +35,75 @@ header nav{
     letter-spacing: 1.5px;  
 }
 
+.success-message {
+    color: #4CAF50;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.205);
+
+    margin: 35px auto 10px auto;
+    border-radius: 25px;
+    border: 1px solid #4CAF50;
+    width: 100%;
+    height: 50px;
+}
+
+.error-message {
+    color: #F44336;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.205);
+
+    margin: 35px auto 10px auto;
+    border-radius: 25px;
+    border: 1px solid #F44336;
+    width: 100%;
+    height: 50px;
+}
+
+/*----------------------------------------------------------*/
+
+/* ADDMSC background */
+.nav li ul {
+    display: none;
+    position: absolute;
+    background: #242D42;
+    width: 100%;
+    top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Underline for Account Icon/Name */
+.account:hover::after {
+    display: none;
+}
+
+/* Display Account Drop Down */
+.account:hover ul{
+    display: block;
+    margin-bottom: 50px;
+}
+
+/* Logout Button */
+.logout:hover {
+    color: red;
+    font-weight: bold;
+}
+
+.account ul li:hover::after {
+    background: red;
+
+}
+
+
+/* margin: top right bottom left */
+
+/*----------------------------------------------------------*/
+
 /* Don't show icon for when webpage becomes to small to display the nav */
 header nav .menu-toggle {
     display: none;
