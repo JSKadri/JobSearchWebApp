@@ -248,10 +248,10 @@ header nav .menu-toggle {
     color: #242D42;
 }
 
-/* for the accordion pannel */
+/* for the accordion panel */
 .panel {
     padding: 0 16px;
-    background-color: #f9f9f9;
+    background-color: #242D42;
     max-height: 0;
     margin: 10px;
     overflow: hidden;
