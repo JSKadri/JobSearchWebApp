@@ -395,3 +395,50 @@ body{
     padding-bottom: 0;
     
 }
+
+
+
+/* Formatting for Registratio Forms */
+
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    margin-top: 0%;
+    border-radius: 15px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+  
+#message div {
+    padding: 10px 35px;
+    font-size: 24px;
+}
+  
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    /*content: "✔";*/
+    content: "\2713";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    /*content: "✖";*/
+    content: "\0058";
+}
