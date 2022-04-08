@@ -1,0 +1,513 @@
+/* CSS for the Project */
+/* <!-- By Tolulope(Tolu) Adebayo --> */
+/* <!-- Modified by Jawad Kadri and Katherine Morozov --> */
+/* Importing Fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header and Nav portion*/
+header{
+    background-color: #f9f9f9;
+    padding: 20px;
+    min-height:50px;
+}
+
+header h1 {
+    display: inline;
+    width: 180px;
+}
+       
+header nav{
+    padding: 20px;
+    float: right;
+}
+
+.navigation-logo
+{
+    color: #242D42;
+    font-size: 40px;
+    width:  150px;
+    letter-spacing: 1.5px;  
+}
+
+.success-message {
+    color: #4CAF50;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.205);
+
+    margin: 35px auto 10px auto;
+    border-radius: 25px;
+    border: 1px solid #4CAF50;
+    width: 100%;
+    height: 50px;
+}
+
+.error-message {
+    color: #F44336;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.205);
+
+    margin: 35px auto 10px auto;
+    border-radius: 25px;
+    border: 1px solid #F44336;
+    width: 100%;
+    height: 50px;
+}
+
+/*----------------------------------------------------------*/
+
+/* ADDMSC background */
+.nav li ul {
+    display: none;
+    position: absolute;
+    background: #242D42;
+    width: 100%;
+    top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Underline for Account Icon/Name */
+.account:hover::after {
+    display: none;
+}
+
+/* Display Account Drop Down */
+.account:hover ul{
+    display: block;
+    margin-bottom: 50px;
+}
+
+/* Logout Button */
+.logout:hover {
+    color: red;
+    font-weight: bold;
+}
+
+.account ul li:hover::after {
+    background: red;
+
+}
+
+
+/* margin: top right bottom left */
+
+/*----------------------------------------------------------*/
+
+/* Don't show icon for when webpage becomes to small to display the nav */
+header nav .menu-toggle {
+    display: none;
+}
+
+.navigation-bar
+{
+    flex: 1;
+    text-align: right;
+    letter-spacing: 0.5px;
+    float: right;
+    margin-top: 0px;
+    padding: auto;
+}
+.navigation-bar ul li
+{
+    list-style: none;  
+    display:inline-block;
+    position: relative;
+    padding: 8px, 12px;
+}
+.navigation-bar ul li a
+{
+    color: #242D42;
+    text-decoration: none;
+    padding: 50px;
+    font-size: 16px;
+}
+
+.navigation-bar ul li::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #278F76;
+    display: block;
+    margin:auto;
+    transition: 0.5s;
+}
+
+.navigation-bar ul li:hover:after{
+    width: 100%;
+}
+
+/* Containing the slogan and get started button */
+.intro-text{
+    background-color: #278F76;
+    color: #242D42;
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 300px;
+}
+
+/* Slogan Portion */
+.intro-text h1{
+    padding-top: 100px;
+    font-size: 50px;                
+}
+
+/* Little information of the slogan/company */
+.intro-text p{
+    margin: 10px 0 40px;
+    font-size: 16px;
+
+}
+
+/* Get started link in home page to sign up page */
+.get-started{
+    display:inline-block;
+    text-decoration: none;
+    color:#f9f9f9;
+    border: 3px solid #242D42;
+    padding: 10px 40px;
+    font-size: 24px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+/* hover effects of the get started button */
+.get-started:hover{
+    border: 1px solid #f9f9f9;
+    color: #242D42;
+    font-size: 24px;
+}
+
+
+/* About Company PAge */
+.why-us{
+    background-color:#f9f9f9;
+    color: #278F76;
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 300px;
+}
+
+.why-us p{
+    margin: 10px 0 40px;
+    font-size: 16px;
+
+}
+
+.questions{
+    background-color: #242D42;
+    color: #278F76;
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.questions h3{
+    color:#f9f9f9;
+}
+
+
+
+
+/* For the accodion on the FAQ */
+.questions p{
+    color:#f9f9f9;
+    font-size: 10px;
+}
+.accordion {
+    background-color: #278F76;
+    color: #f9f9f9;
+    cursor: pointer;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 15px;
+}
+
+.active, .accordion:hover {
+    background-color: #f9f9f9;
+    color: #242D42;
+}
+
+/* for the accordion panel */
+.panel {
+    padding: 0 16px;
+    background-color: #242D42;
+    max-height: 0;
+    margin: 10px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+/* for the contact us portion */
+.email{
+    display:inline-block;
+    text-decoration: none;
+    color:#f9f9f9;
+    border: 1px solid #f9f9f9;
+    padding: 5px 20px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+
+/* Footer portion */
+footer{
+    background-color: #f9f9f9;
+    color: #242D42;
+    text-align: center;
+    min-height:50px;
+    margin-top: auto;
+}
+/* Info of the company portion */
+footer .company-add p{
+    font-size: 14px;
+}
+
+
+
+
+
+/* Media queries: for smaller screens*/
+@media screen and (max-width:1100px){
+    /* Nav Bar Hidden */
+    header nav ul {
+        margin-top: 50px;
+        margin-left: -168px;
+        width: 208px;
+        height: 350px;
+        background: white;
+        position: fixed;
+        overflow: hidden;
+        max-height: 0;
+    }
+    /* Text Spacing */
+    header nav ul li {
+        text-align: center;
+        padding-bottom: 50px;
+        width: 208px;
+    }
+    /* Nav Bar Unhidden */
+    .showing {
+        max-height: 350px;
+        transition: all ease-in-out 250ms;
+    }
+
+    /* Nar Bar Icon */
+    header nav .menu-toggle {
+        display: block;
+        position: absolute;
+        color: #242D42;
+        right: 10px;
+        top: 30px;
+        font-size: 2.5em;
+    }
+}
+
+
+
+
+
+/* For the form */
+body{
+    background-color: #242D42;
+    height:100vh; margin:0;
+    display: flex;
+    flex-direction: column;
+}
+/* The Account box containing the login info to be inputed */
+.wrapper{
+    padding-top: 50px;
+    background-color:#f9f9f9;
+    max-width: 500px;
+    max-height: 300px;
+    margin: 30px auto ;
+    width: 100%;
+    padding-bottom: 100px;
+    border-radius: 25px;
+}
+
+/* Title of the Account Box */
+.wrapper .title{
+    color:#242D42;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Input field  */
+.wrapper .form .input-field{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .form .input-field label{
+    width: 200px;
+    color: #278F76;
+    margin-right: 50px;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+
+.wrapper .form .input-field .submit-button{
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: 0;
+    background-color: #278F76;
+    color:#f9f9f9;
+    cursor: pointer;
+}
+
+/* Extra info to either login  or create an account */
+.wrapper .form p{
+    font-size: 14px;
+    color: #242D42;
+    text-align: center;
+}
+
+.wrapper .form .new-acc{
+
+    text-align: center;
+    font-size: 11px;
+    color: #242D42;
+    padding-bottom: 0;
+    
+}
+
+
+
+
+/* For the login page */
+.login-wrapper{
+    padding-top: 50px;
+    background-color:#f9f9f9;
+    max-width: 500px;
+    max-height: 200px;
+    margin: 30px auto ;
+    width: 100%;
+    padding-bottom: 100px;
+    border-radius: 25px;
+}
+
+.login-wrapper .title{
+    color:#242D42;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.login-wrapper .form .input-field{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.login-wrapper .form .input-field label{
+    width: 200px;
+    color: #278F76;
+    margin-right: 50px;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+
+.login-wrapper .form .input-field .submit-button{
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: 0;
+    background-color: #278F76;
+    color:#f9f9f9;
+    cursor: pointer;
+}
+
+.login-wrapper .form p{
+    font-size: 14px;
+    color: #242D42;
+    text-align: center;
+}
+
+.login-wrapper .form .have-acc{
+
+    text-align: center;
+    font-size: 11px;
+    color: #242D42;
+    padding-bottom: 0;
+    
+}
+
+
+
+/* Formatting for Registratio Forms */
+
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    margin-top: 0%;
+    border-radius: 15px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+  
+#message div {
+    padding: 10px 35px;
+    font-size: 24px;
+}
+  
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    /*content: "✔";*/
+    content: "\2713";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    /*content: "✖";*/
+    content: "\0058";
+}
