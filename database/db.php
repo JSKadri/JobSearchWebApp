@@ -1,6 +1,6 @@
 <?php
 
-    session_start(); // Beging a users session
+    session_start(); // Begin a session
 
     require('connection.php');
 
