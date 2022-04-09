@@ -102,7 +102,10 @@ header nav{
     background: red;
 }
 
-@media screen and (max-width:1100px) {
+@media screen and (max-width:1550px) {
+    .dropDown:hover {
+        padding-bottom: 190px;
+    }
     .nav li ul {
         padding-bottom: 200px;
         top: 0px;
@@ -329,7 +332,7 @@ footer .company-add p{
     }
     /* Nav Bar Unhidden */
     .showing {
-        max-height: 515px;
+        max-height: 370px;
         transition: all ease-in-out 250ms;
     }
 

@@ -6,7 +6,7 @@
     <nav class="navigation-bar">  
         <!-- Javascript needed here to show menu bar-->
         <i class="fa-solid fa-bars menu-toggle"></i>    
-        <ul class="nav">
+        <ul class="nav dropDown">
             <li> <a href="/Starter/index.php">HOME</a> </li>
             <li> <a href="/Starter/index.php#why-us">ABOUT</a> </li>
             <li> <a href="/Starter/index.php#FAQ">FAQ</a> </li>
@@ -21,7 +21,7 @@
                                 <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
                             </a>
                             <ul>
-                                <li class="jobline"><a href="/jobs/creation.php" class="jobs">Create Jobs</a></li>
+                                <li class="jobline"><a href="/jobs/creation.php" class="jobs">Post Job</a></li>
                                 <li class="jobline"><a href="/jobs/dashboard.php">View Jobs</a></li>
                                 <li><a href="<?php echo BASE_URL . 'database/logout.php' ?>" class="logout">Logout</a></li>
                             </ul>
@@ -42,7 +42,7 @@
             <?php else : ?>
                 <li> <a href="login.php">SIGN IN</a> </li>
                 <li> <a href="newacc.php">SIGN UP</a> </li>
-                <li> <a href="newcompanyacc.php">BUISNESS SIGN UP</a> </li>
+                <li> <a href="newcompanyacc.php">COMPANY</a> </li>
             <?php endif; ?>    
         </ul>                           
     </nav>
